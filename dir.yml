@@ -1,0 +1,28 @@
+---
+- name: This playbook will create a directory
+  hosts: development
+  become: true
+  tasks:
+    - name: copy src.txt as dest.txt in the same dir 
+      copy:
+        src: /home/forge/files/src.txt
+        dest: /home/forge/files/dest.txt
+        owner: forge
+        group: forge
+        mode: '0600'
+        backup: yes
+        
+    - name: install package
+      package:
+        name: nginx
+        state: present
+      when: ansible_os_family == "Debian"
+      
+    - name: install package
+      package:
+        name: "{{item}}"
+        state: present
+      with_items:
+        - php
+        - nginx
+        - mysql

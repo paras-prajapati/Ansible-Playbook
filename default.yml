@@ -1,0 +1,117 @@
+---
+plan_id:
+  - { path: "/root/wp-test01.risetech.dev/public/wp-content/themes/divi-child/change-subscription-template.php", oldstring: "plan_N7VssU5SPrMlQA", newstring: "plan_FDcxyHNzatVuw8" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-content/themes/divi-child/change-subscription-template.php", oldstring: "plan_N91BP9WPXWDAzS", newstring: "plan_FDczvj6FrKJF1p" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-content/themes/divi-child/change-subscription-template.php", oldstring: "plan_N7VzRIYL63Yu8i", newstring: "price_1LHrsTKyddFqzHCuKeQs3G08" }
+  
+  - { path: "/root/wp-test01.risetech.dev/public/wp-content/themes/divi-child/freetrial-stripe-template.php", oldstring: "plan_N7VssU5SPrMlQA", newstring: "plan_FDcxyHNzatVuw8" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-content/themes/divi-child/freetrial-stripe-template.php", oldstring: "plan_N91BP9WPXWDAzS", newstring: "plan_FDczvj6FrKJF1p" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-content/themes/divi-child/freetrial-stripe-template.php", oldstring: "plan_N7VzRIYL63Yu8i", newstring: "price_1LHrsTKyddFqzHCuKeQs3G08" }
+  
+  - { path: "/root/wp-test01.risetech.dev/public/wp-content/themes/divi-child/stripe-template.php", oldstring: "plan_N7VssU5SPrMlQA", newstring: "plan_FDcxyHNzatVuw8" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-content/themes/divi-child/stripe-template.php", oldstring: "plan_N91BP9WPXWDAzS", newstring: "plan_FDczvj6FrKJF1p" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-content/themes/divi-child/stripe-template.php", oldstring: "plan_N7VzRIYL63Yu8i", newstring: "price_1LHrsTKyddFqzHCuKeQs3G08" }
+
+
+
+wpconfig_setting:
+# url Configuration
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "https://wp-test.risetech.dev", newstring: "https://wp-test01.risetech.dev" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "https://wp-test.risetech.dev", newstring: "https://wp-test01.risetech.dev" }
+ 
+# Database Configuration
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "wptestdb", newstring: "wptestdb" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "wpuser", newstring: "wpuser" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "5iuctf6d40cyl7bvuyzl", newstring: "5iuctf6d40cyl7bvuyzl" }
+ 
+# Mux Configuration
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "MUX_TOKEN_ID=ca2c29c5-e10f-473c-8883-36a1137c308e", newstring: "MUX_TOKEN_ID=ca2c29c5-e10f-473c-8883-36a1137c308e" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "MUX_TOKEN_SECRET=c8IUyuNWExoP6CSAahhOLGQW0YqhV82MfT1jJ36hrZ8oFF1lU+0dp2WdKGZRZZXzFezpgdrSt+N", newstring: "MUX_TOKEN_SECRET=c8IUyuNWExoP6CSAahhOLGQW0YqhV82MfT1jJ36hrZ8oFF1lU+0dp2WdKGZRZZXzFezpgdrSt+N" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "MUX_SIGNING_KEY=kSKO99fAnQG4cexfWC00ATgbBJKAH2xk1", newstring: "MUX_SIGNING_KEY=kSKO99fAnQG4cexfWC00ATgbBJKAH2xk1" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "MUX_ENV_KEY=9mj9m89t3539bgs96ar55ecjb", newstring: "MUX_ENV_KEY=9mj9m89t3539bgs96ar55ecjb" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "MUX_PRIVATE_KEY=LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tL
+QpNSUlFcEFJQkFBS0NBUUVBcy9lbCsxTXNrSDltSkJ2eE1nYnc2NDFOaHlhUEh5QW
+FaN1Y4RjgxMFhuZGRuTmJwCnlrbWtZeXhENk1tZVlodVJ4bnNza1dJYUo3SVFGT1R
+NNXFXcnhLN2tzbWJ1K096ZHNKRHlDTVQvS3o0ZVRUcTkKb1JtVGxWZ25UdGVucUZO
+MU1oaUd1Ump3QzFvdFp5aFVjdG44Zk9zbFREWjFjdmdGOWFMQXdzb0g1VDMySDBDZ
+wpHcDhBY044QXREenk2Y2o1QS9CU3ZoYWhNYXBUZDNQaU5wZGhkeUoxOHdtMFV1Wj
+NDMktzdkpWYnJScVIyZUJmCklrZjB2ZmhlUGdLQkd5RVhmUU83bzF0Z0M1TlU0TXF
+YeEJTY3VMNVRTaHVWMHZNTitGYmV5OU5mZWhRdmp4RzMKNkFOaG03Y2Y1THl1b29C
+S1EwU2pTU1lWR2xySlYxNFFya24vUFFJREFRQUJBb0lCQUhSa3pOTFpIazl1Tmc5U
+QppeFJCN1B0TGJrTGtxMWdFR1UvTnpxNU9VTjd2OEhtSmZiYzVIYnFPWEhWb1FLbF
+BEMThCTnZmb0xPWlRnWmNoCnkydTQ1bmpVYkZEOXhiejA1UVJYR2xLVnBqcS9lRFd
+Xc2lKSk9td3lrV21xakdLUFo1SzR6aGxVaVp1dC9RTmsKMEFsZjlxNk1IcGxGOTN3
+ZDhTekcwRWlyQmFRNjhwZ0FjZUo4ZFdXa05pQVZia3JqbmF1NDNMTnB2MTRBL2lLS
+ApPTk9GdmROZEpzeE40TUlTR0ZHQjJBZ3plTHJsRjhRenFXT0JON0JUSEVBSnErYk
+Zrb2lIRnl2YjVNKzB5SHVICmFDYXdQUTNmS3BTUHRLeXBxVU5wT3E1T3JRaWZ0c0t
+lSG11MlVObEVnT3l1WkVVSCtpNzBLQlJSTU9rczh4WEwKQTcvQ2xMa0NnWUVBNC9I
+ZHlieHQyajlKbDhVdnhzeU9xZ1cxSFhYeCtiZnplak0rU0lhM3N0SWpyeGRRNmF4N
+QpHU0VBeExsZEtCelZWV2lyc0Q0b0F6TzU1aWp2eTY3ZHAwU2dqbFlmc2NkclIvMH
+NRZE12Rkh4b0FLZXhlU3pDCitOWGVNNXo1WWRKeEtSaWhlbVM2cWhGdFR0VThyM2R
+HS0prdVpvdkZ1ZzIyN3gwRkRnbFJhSU1DZ1lFQXloNFoKYTBvOEVkbnM1QWltaCtk
+d1FJYWhHNStWYkY5RkorNUhyTlFWcFNTMG1JbHV0c1NERWtDUmc2VGh4NEswejJHS
+wp6TlE4azZNV0xqdlArRlFQTXVxWkU4dlUzazhFc1ZBWHZIaUw3YVJnVW1UOUhJbk
+pkODRuWEh6MkVVYXV1K1RtCldOTlVodnUzNkYzalFwQkxYNmFMcDh3UnhYZWF3VXF
+iSmV5QTdUOENnWUVBdzZQZTRQd2FLUHl5dEZHcERPNmEKNy9EUUgwWVE5bXpjeTZC
+WnI3UDR6TUV4b1dEWXNJYTR0VW12T0NtRWZCNHJPQkFMYzh3VldaSTIxd1dCc3djV
+go5Uytnd2luSE1EWGhyVHJ0bGwya2hlZTArQUwxL3ZQZEwrZVh2Q0xacEEwVDFOcn
+dGWFdKQk5qS1FhUWhYdFIzCllmYi9iVUkvNWMxSm1uY0UxS1JJdS9NQ2dZRUF2Rlh
+Id2QzdWs0UEo1Y0xaeXBHeVc2NFh1YkcrZnJsWHE1bXgKV0M1WDdRYUM4aEErQmpp
+ZkdnYm9rUTYzQkQyYlZoTENUNU1FejEyTWNaQnlmaWQxOGpBQWJCM25RUy9JWTZFS
+wpQU2ptMm8zczQxb1BNT1NEd3d0cVNoaDNBaW9tOEJhZlBlM09PZW1jdVAyam9vYn
+FkVHF2cjYvTWI0Qy94NVZKCmRORW9ZZWtDZ1lCQ1FNbHVLYkxVYXVYTzBnVzBvMVZ
+ETDNrdU93WjZIaGl5VHZDTGwrNFI3cFlEb0tRTklvVG8KUVY0T3FGVk8zYmVtUzZX
+bFRNdlpORWpUNXFoS2NyM2tmSisvd2R2bi9BUlZUWC9GU3NkblBKcmtNanhQb3ZDb
+QplUjUzYmVlWFRUcTAzRnVYSTNkOEEvU2cwTk45RFRhYVdmNnNkdnR4L3psVVhFS0
+NJS3BQUXc9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=", newstring: "MUX_PRIVATE_KEY=LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tL
+QpNSUlFcEFJQkFBS0NBUUVBcy9lbCsxTXNrSDltSkJ2eE1nYnc2NDFOaHlhUEh5QW
+FaN1Y4RjgxMFhuZGRuTmJwCnlrbWtZeXhENk1tZVlodVJ4bnNza1dJYUo3SVFGT1R
+NNXFXcnhLN2tzbWJ1K096ZHNKRHlDTVQvS3o0ZVRUcTkKb1JtVGxWZ25UdGVucUZO
+MU1oaUd1Ump3QzFvdFp5aFVjdG44Zk9zbFREWjFjdmdGOWFMQXdzb0g1VDMySDBDZ
+wpHcDhBY044QXREenk2Y2o1QS9CU3ZoYWhNYXBUZDNQaU5wZGhkeUoxOHdtMFV1Wj
+NDMktzdkpWYnJScVIyZUJmCklrZjB2ZmhlUGdLQkd5RVhmUU83bzF0Z0M1TlU0TXF
+YeEJTY3VMNVRTaHVWMHZNTitGYmV5OU5mZWhRdmp4RzMKNkFOaG03Y2Y1THl1b29C
+S1EwU2pTU1lWR2xySlYxNFFya24vUFFJREFRQUJBb0lCQUhSa3pOTFpIazl1Tmc5U
+QppeFJCN1B0TGJrTGtxMWdFR1UvTnpxNU9VTjd2OEhtSmZiYzVIYnFPWEhWb1FLbF
+BEMThCTnZmb0xPWlRnWmNoCnkydTQ1bmpVYkZEOXhiejA1UVJYR2xLVnBqcS9lRFd
+Xc2lKSk9td3lrV21xakdLUFo1SzR6aGxVaVp1dC9RTmsKMEFsZjlxNk1IcGxGOTN3
+ZDhTekcwRWlyQmFRNjhwZ0FjZUo4ZFdXa05pQVZia3JqbmF1NDNMTnB2MTRBL2lLS
+ApPTk9GdmROZEpzeE40TUlTR0ZHQjJBZ3plTHJsRjhRenFXT0JON0JUSEVBSnErYk
+Zrb2lIRnl2YjVNKzB5SHVICmFDYXdQUTNmS3BTUHRLeXBxVU5wT3E1T3JRaWZ0c0t
+lSG11MlVObEVnT3l1WkVVSCtpNzBLQlJSTU9rczh4WEwKQTcvQ2xMa0NnWUVBNC9I
+ZHlieHQyajlKbDhVdnhzeU9xZ1cxSFhYeCtiZnplak0rU0lhM3N0SWpyeGRRNmF4N
+QpHU0VBeExsZEtCelZWV2lyc0Q0b0F6TzU1aWp2eTY3ZHAwU2dqbFlmc2NkclIvMH
+NRZE12Rkh4b0FLZXhlU3pDCitOWGVNNXo1WWRKeEtSaWhlbVM2cWhGdFR0VThyM2R
+HS0prdVpvdkZ1ZzIyN3gwRkRnbFJhSU1DZ1lFQXloNFoKYTBvOEVkbnM1QWltaCtk
+d1FJYWhHNStWYkY5RkorNUhyTlFWcFNTMG1JbHV0c1NERWtDUmc2VGh4NEswejJHS
+wp6TlE4azZNV0xqdlArRlFQTXVxWkU4dlUzazhFc1ZBWHZIaUw3YVJnVW1UOUhJbk
+pkODRuWEh6MkVVYXV1K1RtCldOTlVodnUzNkYzalFwQkxYNmFMcDh3UnhYZWF3VXF
+iSmV5QTdUOENnWUVBdzZQZTRQd2FLUHl5dEZHcERPNmEKNy9EUUgwWVE5bXpjeTZC
+WnI3UDR6TUV4b1dEWXNJYTR0VW12T0NtRWZCNHJPQkFMYzh3VldaSTIxd1dCc3djV
+go5Uytnd2luSE1EWGhyVHJ0bGwya2hlZTArQUwxL3ZQZEwrZVh2Q0xacEEwVDFOcn
+dGWFdKQk5qS1FhUWhYdFIzCllmYi9iVUkvNWMxSm1uY0UxS1JJdS9NQ2dZRUF2Rlh
+Id2QzdWs0UEo1Y0xaeXBHeVc2NFh1YkcrZnJsWHE1bXgKV0M1WDdRYUM4aEErQmpp
+ZkdnYm9rUTYzQkQyYlZoTENUNU1FejEyTWNaQnlmaWQxOGpBQWJCM25RUy9JWTZFS
+wpQU2ptMm8zczQxb1BNT1NEd3d0cVNoaDNBaW9tOEJhZlBlM09PZW1jdVAyam9vYn
+FkVHF2cjYvTWI0Qy94NVZKCmRORW9ZZWtDZ1lCQ1FNbHVLYkxVYXVYTzBnVzBvMVZ
+ETDNrdU93WjZIaGl5VHZDTGwrNFI3cFlEb0tRTklvVG8KUVY0T3FGVk8zYmVtUzZX
+bFRNdlpORWpUNXFoS2NyM2tmSisvd2R2bi9BUlZUWC9GU3NkblBKcmtNanhQb3ZDb
+QplUjUzYmVlWFRUcTAzRnVYSTNkOEEvU2cwTk45RFRhYVdmNnNkdnR4L3psVVhFS0
+NJS3BQUXc9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=" }
+  
+  
+  
+# Stripe Keys
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "stripe_secret_key=sk_test_eAwZK9erwGPNiEXlR8MxsC8I", newstring: "stripe_secret_key=sk_test_eAwZK9erwGPNiEXlR8MxsC8I" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "stripe_publishable_key=pk_live_jjSezsNvcXtSfOvIk7Kl1A9O", newstring: "stripe_publishable_key=pk_live_jjSezsNvcXtSfOvIk7Kl1A9O" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "stripe_publishable_key_test=pk_test_WjrFWomudnMjyccPnXh38vaA", newstring: "stripe_publishable_key_test=pk_test_WjrFWomudnMjyccPnXh38vaA" }
+
+# Keap Keys
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "KEAP_APP_ID=bki158", newstring: "KEAP_APP_ID=bki158" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", oldstring: "KEAP_SECRET=7613b2e0c8ccdc9fde7d9b7dfedcda2c1b8d5052d8c7013a025e4c30cccd71a6", newstring: "KEAP_SECRET=7613b2e0c8ccdc9fde7d9b7dfedcda2c1b8d5052d8c7013a025e4c30cccd71a6" }
+
+# wp-config URL
+lines:
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php", url: "define('WP_HOME','https://wp-test.risetech.dev');" }
+  - { path: "/root/wp-test01.risetech.dev/public/wp-config.php",url: "define('WP_SITEURL','https://wp-test.risetech.dev');" }
+

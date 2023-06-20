@@ -1,0 +1,45 @@
+---
+  - hosts: production
+    become: true
+    tasks:
+        
+      - name: create a backup
+        mysql_db:
+          name: wp_risetv1dev
+          state: dump
+          target: risetv1dev@risetv1dev.ssh.wpengine.net:sites/risetv1dev/wp_risetv1dev.sql
+          login_host: localhost
+          login_user: risetv1dev
+          login_password: 3h6cpLk3BhJjN29aJFlA
+ 
+ 
+      - name: copy the database to the development server
+        raw: rsync -azhpv risetv1dev@risetv1dev.ssh.wpengine.net:sites/risetv1dev/wp_risetv1dev.sql /home/forge/wptestdb.sql
+ 
+      - name: import the database
+        mysql_db:
+          name: wptestdb
+          state: import
+          target: /home/forge/wptestdb.sql
+          login_host: 64.227.110.93
+          login_user: wpuser
+          login_password: '5iuctf6d40cyl7bvuyzl'
+        delegate_to: development 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     
+      #- name: replace in sql files
+       # shell: sed "s/staging.ntdbeautypageant.com/missntd.org/g" /home/forge/paras/stagingntdbeau.sql > /home/forge/paras/missntd.sql
+      

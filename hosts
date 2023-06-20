@@ -1,0 +1,12 @@
+[production]
+#web1 ansible_host=abc@45.33.8.10
+#web1 ansible_host=abc@abc.ssh.wpengine.net
+
+[development]
+web2 ansible_host=pqr@104.237.138.7
+#web2 ansible_host=xyz@64.227.110.93
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+localhost ansible_connection=local ansible_python_interpreter="/usr/bin/env python"

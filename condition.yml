@@ -1,0 +1,15 @@
+---
+  - hosts: localhost
+    become: yes
+    user: root
+    connection: ssh
+    
+    tasks:
+       - name: Install nginx server for dabian family
+         command: apt-get -y install nginx
+         when: ansible_os_family == "Debian"
+         
+       - name: Install nginx server for redhat family
+         command: yum -y install nginx
+         when: ansible_os_family == "RedHat"
+

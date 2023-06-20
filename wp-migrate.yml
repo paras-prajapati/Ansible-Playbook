@@ -1,0 +1,85 @@
+---
+  - hosts: localhost
+    become: yes
+    gather_facts: no
+    vars_files:
+        - default.yml
+
+    tasks:
+        
+      - name: Sync wordpress files from wpengine to forge
+        command: sh /root/backup-pull.sh
+     
+      - name: Dump mysql database from wpengine dev environment import in wp test database on forge
+        mysql_db:
+          name: wptestdb
+          state: import
+          target: /root/wptestdb.sql
+          login_host: localhost
+          login_user: root
+          login_password: 'c8VHNHhk1uJqps6Rswai'
+        delegate_to: localhost 
+
+      - name: replace risetv1dev.wpengine.com with wp-test.risetech.dev in database
+        shell: 'php srdb.cli.php -h localhost -n wptestdb -u root -p c8VHNHhk1uJqps6Rswai -s "risetv1dev.wpengine.com" -r "wp-test01.risetech.dev"'
+        args:
+          chdir: '/root/Search-Replace-DB'
+          
+      - name: Edit wp-config file setting
+        ansible.builtin.replace:
+          path: "{{ item.path }}"
+          regexp: "{{ item.oldstring }}"
+          replace: "{{ item.newstring }}"
+        with_items: "{{ wp_config }}"
+
+      - name: Edit wp-config file URL setting
+        lineinfile:
+          path: "{{ item.path }}"
+          state: present
+         #insertafter: EOF
+          line: "{{ item.url }}"
+          create: true
+        with_items: "{{ lines }}"
+        
+      - name: Mux_Key Replcae
+        ansible.builtin.replace:
+          path: "{{ item.path }}"
+          regexp: "{{ item.oldstring }}"
+          replace: "{{ item.newstring }}"
+        with_items: "{{ mux_key }}"
+        
+      - name: Stripe_Key Replcae
+        ansible.builtin.replace:
+          path: "{{ item.path }}"
+          regexp: "{{ item.oldstring }}"
+          replace: "{{ item.newstring }}"
+        with_items: "{{ stripe_key }}"
+        
+      - name: Keap_Key Replcae
+        ansible.builtin.replace:
+          path: "{{ item.path }}"
+          regexp: "{{ item.oldstring }}"
+          replace: "{{ item.newstring }}"
+        with_items: "{{ keap_key }}"
+
+      - name: Run several update queries against db wptestdb in single transaction
+        community.mysql.mysql_query:
+          login_host: localhost
+          login_user: root
+          login_password: 'c8VHNHhk1uJqps6Rswai'
+          login_db: wptestdb
+          query: "{{item.query}}"
+        register: r_query
+        loop:
+          - { query: "update wptestdb.wp_postmeta set meta_value ='s71Ps7M8EdsEWUo01uC2Yr6hJ8UGIguao' where meta_key='single_page_mux_playback_id' " }
+          - { query: "update wptestdb.wp_postmeta set meta_value ='s71Ps7M8EdsEWUo01uC2Yr6hJ8UGIguao' where meta_key='home_page_slider_mux_playback_id' " }
+          - { query: "update wptestdb.wp_termmeta set meta_value = 's71Ps7M8EdsEWUo01uC2Yr6hJ8UGIguao' where meta_key='cat_trailer' " }
+
+      - name: Replace string for files under wp-content/themes/divi-child dir
+        ansible.builtin.replace:
+          path: "{{ item.path }}"
+          regexp: "{{ item.oldstring }}"
+          replace: "{{ item.newstring }}"
+        with_items: "{{ plan_id }}"
+
+     

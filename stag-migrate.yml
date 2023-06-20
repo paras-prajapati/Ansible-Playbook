@@ -1,0 +1,35 @@
+---
+  - hosts: localhost
+    become: yes
+    gather_facts: no
+   
+    tasks:
+        
+      - name: Sync wordpress files from staging.ntdbeautypageant.com to root
+        command: sh /root/staging-pull.sh
+     
+      - name: Dump mysql database from wpengine dev environment import in wp test database on forge
+        mysql_db:
+          name: missntdprd
+          state: import
+          target: /root/stagingntdbeau.sql
+          login_host: localhost
+          login_user: root
+          login_password: 'c8VHNHhk1uJqps6Rswai'
+        delegate_to: localhost 
+
+      - name: replace risetv1dev.wpengine.com with wp-test.risetech.dev in database
+        shell: 'php srdb.cli.php -h localhost -n missntdprd -u root -p c8VHNHhk1uJqps6Rswai -s "staging.ntdbeautypageant.com" -r "wp-test01.risetech.dev"'
+        args:
+          chdir: '/root/Search-Replace-DB'
+          
+      - name: Replace string for files under wp-content/themes/divi-child dir
+        ansible.builtin.replace:
+          path: "{{ item.path }}"
+          regexp: "{{ item.From }}"
+          replace: "{{ item.To }}"
+        with_items:
+          - { path: '/root/missntd.org/public/wp-config.php', From: 'stagingntdbeau', To: 'missntdprd'}
+          - { path: '/root/missntd.org/public/wp-config.php', From: 'ntdbeauty', To: 'root'}
+          - { path: '/root/missntd.org/public/wp-config.php', From: 'ymog9s1mpacm079duk7y', To: 'c8VHNHhk1uJqps6Rswai'}
+
